@@ -1,16 +1,7 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "app.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "app.py"
-      }
-    ]
-  }
+  "builds": [
+    { "src": "app.py", "use": "@vercel/python" }
+  ],
+  "installCommand": "apt-get install -y pkg-config libmariadb-dev && pip install -r requirements.txt"
+}
   
