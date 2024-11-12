@@ -15,7 +15,7 @@ def home():
         original_text = request.form["original_text"]
         result = paraphraser(original_text, max_length=50, num_return_sequences=1)
         paraphrased_text = result[0]['generated_text']
-    return render_template("index.html", paraphrased_text=paraphrased_text)
+    return render_template("templates/index.html", paraphrased_text=paraphrased_text)
 
 if __name__ == "__main__":
     app.run(debug=True)
